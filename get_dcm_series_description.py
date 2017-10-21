@@ -1,4 +1,4 @@
-# python
+# -*- coding: utf-8 -*-
 import argparse, dicom, os, time
 
 parser = argparse.ArgumentParser(
