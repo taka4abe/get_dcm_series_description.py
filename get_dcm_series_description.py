@@ -8,7 +8,7 @@ parser = argparse.ArgumentParser(
     This code depends on python3, pydicom, argparse, os and time.''',
     )
 parser.add_argument("-indir", nargs= 1, help=": the name of the dir_tree where dicom datas are, default: '.'  ")
-parser.add_argument("-outfile", nargs= 1, help=": name of file to seve the list.  ")
+parser.add_argument("-outfile", nargs= 1, help=": name of file to save the list.  ")
 parser.add_argument('-v', '--version', action='version', version='%(prog)s 0.1, Oct/21/2017')
 args = parser.parse_args()
 
