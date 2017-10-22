@@ -66,10 +66,10 @@ for root, dirs, files in os.walk(in_dir):
         print(' ')
 
 try:
-    f = open(out_file, 'w') # 書き込みモードで開く
+    f = open(out_file, 'w')
     for x in sequence_list:
-        f.write(", " + str(x) + ": \n") # 引数の文字列をファイルに書き込む
-    f.close() # ファイルを閉じる
+        f.write(", " + str(x) + ": \n")
+    f.close()
 except:
     pass
 
