@@ -38,6 +38,7 @@ for root, dirs, files in os.walk(in_dir):
     total += 1
 print("a total of", total, "files")
 print()
+verpose_point = total // 20 + 1
 
 for root, dirs, files in os.walk(in_dir):
     for file_name in files:
@@ -58,12 +59,16 @@ for root, dirs, files in os.walk(in_dir):
             pass
 
     n += 1
-    if n% 30 ==0:
+    if n == 1 or n == 3 or n == 10 or n % verpose_point == 0:
         elapsed_time = time.time() - start
         print("{0}/{1} cases checked".format(n, total))
-        print("elapsed/est_total: {0:2.2f}/{1:2.2f} sec".format(elapsed_time, ((elapsed_time/n)*total)))
+        try:
+            print("elapsed/est_total: {0:2.2f}/{1:2.2f} sec".format(elapsed_time, ((elapsed_time/n)*total)))
+        except:
+            pass
         print(len(sequence_list), "different names, ex: ", sequence_list[-1:])
         print(' ')
+
 
 try:
     f = open(out_file, 'w')
